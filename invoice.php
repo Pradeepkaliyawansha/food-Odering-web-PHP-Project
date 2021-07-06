@@ -5,6 +5,8 @@ session_start();
 date_default_timezone_set('Asia/Colombo');
 require('fpdf183/fpdf.php');
 $date = date("l jS \of F Y h:i:s A") ;
+$date = getdate();
+$order_id = "$date[year]$date[mon]$date[mday]$date[hours]$date[minutes]$date[seconds]_$_SESSION['user_id']";
 
 $total_price=0;
 $name = $_SESSION['user_name'];
@@ -29,6 +31,10 @@ $pdf->SetFont('Arial','',12);
 
 $pdf->Cell(15	,5,'Date:',0,0);
 $pdf->Cell(20	,5,$date,0,1);//end of line
+
+
+$pdf->Cell(15	,5,'Order ID:',0,0);
+$pdf->Cell(20	,5,$order_id,0,1);//end of line
 
 //make a dummy empty cell as a vertical spacer
 $pdf->Cell(189	,10,'',0,1);//end of line
