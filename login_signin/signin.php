@@ -78,7 +78,7 @@
             $telephone = mysqli_real_escape_string($database,$telephone);
             $answer = mysqli_real_escape_string($database, strtolower($answer));
 
-            $query = "INSERT INTO users(name,password, address, telephone, account, account_balance, email, answer)VALUES('{$name}','{$hashed_password}','{$address}','{$telephone}','{$hashed_account}', '{$account_balance}','{$hashed_email}', '{$answer}') LIMIT 1";
+            $query = "INSERT INTO users(name,password, address, telephone, account, account_balance, email, answer)VALUES('{$name}','{$hashed_password}','{$address}','{$telephone}','{$hashed_account}', '{$account_balance}','{$hashed_email}', '{$answer}')";
 
             $result = mysqli_query($database,$query);
 
