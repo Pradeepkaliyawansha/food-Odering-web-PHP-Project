@@ -78,11 +78,8 @@
             $telephone = mysqli_real_escape_string($database,$telephone);
             $answer = mysqli_real_escape_string($database, strtolower($answer));
 
-<<<<<<< HEAD
             $query = "INSERT INTO users(name,password, address, telephone, account, account_balance, email, answer)VALUES('{$name}','{$hashed_password}','{$address}','{$telephone}','{$hashed_account}', '{$account_balance}','{$hashed_email}', '{$answer}');";
-=======
-            $query = "INSERT INTO users(name,password, address, telephone, account, account_balance, email, answer)VALUES('{$name}','{$hashed_password}','{$address}','{$telephone}','{$hashed_account}', '{$account_balance}','{$hashed_email}', '{$answer}')";
->>>>>>> fdf111c8c1ce96cba9fc05fb8268b8ae0d3c7bfe
+
 
             $result = mysqli_query($database,$query);
 
