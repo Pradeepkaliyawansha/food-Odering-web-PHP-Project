@@ -6,7 +6,7 @@ date_default_timezone_set('Asia/Colombo');
 require('fpdf183/fpdf.php');
 $date = date("l jS \of F Y h:i:s A") ;
 $date = getdate();
-$order_id = "$date[year]$date[mon]$date[mday]$date[hours]$date[minutes]$date[seconds]_$_SESSION['user_id']";
+$order_id = "$date[year]$date[mon]$date[mday]$date[hours]$date[minutes]$date[seconds]$_SESSION['user_id']";
 
 $total_price=0;
 $name = $_SESSION['user_name'];
