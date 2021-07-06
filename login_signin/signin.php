@@ -45,10 +45,10 @@
         else{
             // inputs validation process
 
-            if (!isset($account) || strlen(trim($account)) < 16 ) {
-                $errors[] = "Invalid account number";
-            }if (strlen(trim($password)) <= 4) {
-                $errors[] = "Please enter a strong password";
+            if (!isset($account) || (strlen(trim($account)) != 16) ) {
+                $errors[] = "Invalid account number,account number should have 16 characters";
+            }if (strlen(trim($password)) <= 8) {
+                $errors[] = "Please enter a strong password: atleast 8 characters";
             }if ($password != $password2) {
                 $errors[] = "Passwords doesn't match";
             }if (!is_numeric($telephone) || strlen(trim($telephone)) <10  ) {
@@ -78,8 +78,8 @@
             $telephone = mysqli_real_escape_string($database,$telephone);
             $answer = mysqli_real_escape_string($database, strtolower($answer));
 
-            $query = "INSERT INTO users(name,password, address, telephone, account, account_balance, email, answer)VALUES('{$name}','{$hashed_password}','{$address}','{$telephone}','{$hashed_account}', '{$account_balance}','{$hashed_email}', '{$answer}');";
 
+            $query = "INSERT INTO users(name,password, address, telephone, account, account_balance, email, answer)VALUES('{$name}','{$hashed_password}','{$address}','{$telephone}','{$hashed_account}', '{$account_balance}','{$hashed_email}', '{$answer}');";
 
             $result = mysqli_query($database,$query);
 
@@ -148,7 +148,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <input type="text" name="accnt_number" class="form-control" id="signin-input" placeholder="Account" required>
+                            <input type="text" name="accnt_number" class="form-control" id="signin-input" placeholder="Card Number" required>
                         </div>
                         <div class="col">
                             <input type="text" class="form-control" id="signin-input" name="telephone_num" placeholder="Telephone Number" required>
