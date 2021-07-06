@@ -152,11 +152,11 @@ $additional_items = mysqli_fetch_all($row1);
         }
 
         ?>
-        <SCript>
+<!--         <SCript>
             $("[type='number']").keypress(function(evt) {
                 evt.preventDefault();
             });
-        </SCript>
+        </SCript> -->
     </div>
 
 </div>
