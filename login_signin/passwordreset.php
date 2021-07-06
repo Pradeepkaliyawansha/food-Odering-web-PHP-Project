@@ -67,6 +67,10 @@ function passwordReset(){
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+    <div style="background:rgba(0, 0, 0, 0.534);padding: 20px;" class="header">
+        <a href="../index.php"><img width="100px" height="50px" src="images/logo.png" alt="ninda"></a>
+        <a href="../index.php" id="signin-submit" style="padding:5px;width: 58px" class="btn btn-warning">Home</a>
+    </div>
    <div class="container-fluid">
      <div class="row">
         <div class="col-md-3"></div>
