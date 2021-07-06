@@ -1,0 +1,108 @@
+    .banner {
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    
+    #im1 {
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .navbar {
+        background-color: rgba(0, 00.1, 0.1, .6);
+    }
+    
+    .carousel-caption {
+        padding-bottom: 250px;
+        font-family: poppins;
+    }
+    
+    .carousel-caption h2 {
+        font-size: 70px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .carousel-caption h2 span {
+        color: #EDBB00;
+    }
+    
+    .cat {
+        background: #e01212;
+        padding: 15px 35px;
+        display: inline-block;
+        margin-top: 15px;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 25px;
+        text-decoration: none;
+    }
+    
+    .cat:hover {
+        text-decoration: none;
+        background: #EDBB00;
+    }
+    
+    .carousel-control.right {
+        background-image: none;
+    }
+    
+    .carousel-control.left {
+        background-image: none;
+    }
+    
+    .label {
+        background-color: #f6413e;
+        border-radius: 2rem;
+        padding: 3px;
+        font-size: 15px;
+        color: aliceblue;
+    }
+    
+    .log:hover {
+        background: #EDBB00;
+    }
+    /* form-select */
+    
+    .form-select {
+        border-radius: 1rem;
+        padding: 5px;
+        border-color: #e01212;
+        text-decoration: none;
+        outline: 0;
+    }
+    /*responsive css*/
+    
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .carousel-caption {
+            padding-bottom: 350px;
+        }
+        .carousel-caption h2 {
+            font-size: 50px;
+        }
+    }
+    
+    @media only screen and (max-width: 767px) {
+        .navbar-inverse .navbar-brand {
+            font-size: 30px;
+            padding: 20px 15px;
+        }
+        .navbar-collapse {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .carousel-caption {
+            padding-bottom: 350px;
+        }
+        .carousel-caption h2 {
+            font-size: 25px;
+        }
+        .carousel-caption h3 {
+            font-size: 18px;
+        }
+        .carousel-caption a {
+            padding: 10px 25px;
+        }
+    }
